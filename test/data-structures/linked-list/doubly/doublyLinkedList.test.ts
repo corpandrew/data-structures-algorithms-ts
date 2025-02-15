@@ -6,7 +6,7 @@ describe('DoublyLinkedList', () => {
     let doublyLinkedList: IDoublyLinkedList<number>; // Use the interface type
 
     beforeEach(() => {
-        doublyLinkedList = new DoublyLinkedList<number>(); // Instantiate your DoublyLinkedList implementation
+        doublyLinkedList = new DoublyLinkedList<number>();
     });
 
     describe('getSize and isEmpty', () => {
@@ -78,18 +78,18 @@ describe('DoublyLinkedList', () => {
 
         it('should insert at the end (index = size)', () => {
             doublyLinkedList.insertAtEnd(10);
-            doublyLinkedList.insertAtIndex(20, 1); // Index 1 is the end when size is 1
+            doublyLinkedList.insertAtIndex(20, 1);
             expect(doublyLinkedList.getSize()).toBe(2);
             expect(doublyLinkedList.toArray()).toEqual([10, 20]);
         });
 
         it('should throw error for index out of bounds (negative index)', () => {
-            expect(() => doublyLinkedList.insertAtIndex(10, -1)).toThrowError(); // Or adjust assertion based on your error handling
+            expect(() => doublyLinkedList.insertAtIndex(10, -1)).toThrowError();
         });
 
         it('should throw error for index out of bounds (index > size)', () => {
             doublyLinkedList.insertAtEnd(10);
-            expect(() => doublyLinkedList.insertAtIndex(20, 2)).toThrowError(); // Or adjust assertion based on your error handling
+            expect(() => doublyLinkedList.insertAtIndex(20, 2)).toThrowError();
         });
     });
 
@@ -138,6 +138,18 @@ describe('DoublyLinkedList', () => {
             expect(doublyLinkedList.toArray()).toEqual([10, 30]);
         });
 
+        it('should delete faster from a valid index', () => {
+            doublyLinkedList.insertAtEnd(10);
+            doublyLinkedList.insertAtEnd(20);
+            doublyLinkedList.insertAtEnd(30);
+            doublyLinkedList.insertAtEnd(40);
+            doublyLinkedList.insertAtEnd(50);
+            const deletedItem = doublyLinkedList.deleteAtIndex(3);
+            expect(deletedItem).toBe(40);
+            expect(doublyLinkedList.getSize()).toBe(4);
+            expect(doublyLinkedList.toArray()).toEqual([10, 20, 30, 50]);
+        });
+
         it('should delete from the beginning (index 0)', () => {
             doublyLinkedList.insertAtEnd(10);
             doublyLinkedList.insertAtEnd(20);
@@ -151,20 +163,20 @@ describe('DoublyLinkedList', () => {
             doublyLinkedList.insertAtEnd(10);
             doublyLinkedList.insertAtEnd(20);
             const deletedItem = doublyLinkedList.deleteAtIndex(1);
-            expect(deletedItem).toBe(20); // In DoublyLinkedList, deleteFromEnd might be O(1) so testing index=size-1 in deleteAtIndex is still relevant
+            expect(deletedItem).toBe(20);
             expect(doublyLinkedList.getSize()).toBe(1);
             expect(doublyLinkedList.toArray()).toEqual([10]);
         });
 
         it('should return undefined for index out of bounds (negative index)', () => {
             const deletedItem = doublyLinkedList.deleteAtIndex(-1);
-            expect(deletedItem).toBeUndefined(); // Or adjust assertion based on your error handling
+            expect(deletedItem).toBeUndefined();
         });
 
         it('should return undefined for index out of bounds (index >= size)', () => {
             doublyLinkedList.insertAtEnd(10);
             const deletedItem = doublyLinkedList.deleteAtIndex(1);
-            expect(deletedItem).toBeUndefined(); // Or adjust assertion based on your error handling
+            expect(deletedItem).toBeUndefined();
         });
 
         it('should return undefined when deleting from an empty list', () => {
@@ -208,6 +220,7 @@ describe('DoublyLinkedList', () => {
             doublyLinkedList.insertAtEnd(10);
             doublyLinkedList.insertAtEnd(20);
             doublyLinkedList.insertAtEnd(30);
+            expect(doublyLinkedList.toArray()).toEqual([10, 20, 30]);
             doublyLinkedList.reverseList();
             expect(doublyLinkedList.toArray()).toEqual([30, 20, 10]);
         });
