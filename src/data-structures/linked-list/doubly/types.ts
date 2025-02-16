@@ -80,6 +80,5 @@ export interface IDoublyLinkedList<T> {
      */
     toArray(): T[];
 
-    // Optional: Iterable interface to allow for...of loops (if you want to make it iterable)
     [Symbol.iterator](): Iterator<T>;
 }

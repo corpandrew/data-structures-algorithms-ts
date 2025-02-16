@@ -1,11 +1,12 @@
-import {SinglyLinkedList} from '../../../../src/data-structures/linked-list/singly/singlyLinkedList'; // Adjust path if needed
+import {ISinglyLinkedList} from "../../../../src/data-structures/linked-list/singly/types";
+import {SinglyLinkedList} from '../../../../src/data-structures/linked-list/singly/singlyLinkedList';
 import {describe, it, expect, beforeEach} from 'vitest';
 
-describe('SinglyLinkedList', () => { // Or whatever your LinkedList class name is
-    let linkedList: SinglyLinkedList<number>; // Use the interface type
+describe('SinglyLinkedList', () => {
+    let linkedList: ISinglyLinkedList<number>;
 
     beforeEach(() => {
-        linkedList = new SinglyLinkedList<number>(); // Instantiate your LinkedList implementation
+        linkedList = new SinglyLinkedList<number>();
     });
 
     describe('getSize and isEmpty', () => {
@@ -34,7 +35,6 @@ describe('SinglyLinkedList', () => { // Or whatever your LinkedList class name i
         it('should insert at the beginning of an empty list', () => {
             linkedList.insertAtBeginning(10);
             expect(linkedList.getSize()).toBe(1);
-            // You might need a way to peek at the head or convert to array for assertions
             expect(linkedList.toArray()).toEqual([10]);
         });
 
@@ -78,18 +78,18 @@ describe('SinglyLinkedList', () => { // Or whatever your LinkedList class name i
 
         it('should insert at the end (index = size)', () => {
             linkedList.insertAtEnd(10);
-            linkedList.insertAtIndex(20, 1); // Index 1 is the end when size is 1
+            linkedList.insertAtIndex(20, 1);
             expect(linkedList.getSize()).toBe(2);
             expect(linkedList.toArray()).toEqual([10, 20]);
         });
 
         it('should throw error for index out of bounds (negative index)', () => {
-            expect(() => linkedList.insertAtIndex(10, -1)).toThrowError(); // Or adjust assertion based on your error handling
+            expect(() => linkedList.insertAtIndex(10, -1)).toThrowError();
         });
 
         it('should throw error for index out of bounds (index > size)', () => {
             linkedList.insertAtEnd(10);
-            expect(() => linkedList.insertAtIndex(20, 2)).toThrowError(); // Or adjust assertion based on your error handling
+            expect(() => linkedList.insertAtIndex(20, 2)).toThrowError();
         });
     });
 
@@ -158,13 +158,13 @@ describe('SinglyLinkedList', () => { // Or whatever your LinkedList class name i
 
         it('should return undefined for index out of bounds (negative index)', () => {
             const deletedItem = linkedList.deleteAtIndex(-1);
-            expect(deletedItem).toBeUndefined(); // Or adjust assertion based on your error handling
+            expect(deletedItem).toBeUndefined();
         });
 
         it('should return undefined for index out of bounds (index >= size)', () => {
             linkedList.insertAtEnd(10);
             const deletedItem = linkedList.deleteAtIndex(1);
-            expect(deletedItem).toBeUndefined(); // Or adjust assertion based on your error handling
+            expect(deletedItem).toBeUndefined();
         });
 
         it('should return undefined when deleting from an empty list', () => {

@@ -1,6 +1,6 @@
 import {ISinglyLinkedList} from "./types.ts";
 
-export class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
+export class SinglyLinkedList<T> implements ISinglyLinkedList<T>, Iterable<T> {
     private head: Node<T> | null;
     private tail: Node<T> | null;
     private length: number;
@@ -17,6 +17,10 @@ export class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
 
     isEmpty(): boolean {
         return this.length === 0;
+    }
+
+    peekHead(): T | undefined {
+        return this.head?.getValue();
     }
 
     insertAtBeginning(data: T): void {

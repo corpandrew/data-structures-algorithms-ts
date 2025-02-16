@@ -16,6 +16,11 @@ export interface ISinglyLinkedList<T> {
     isEmpty(): boolean;
 
     /**
+     * Gets the value of the first node
+     */
+    peekHead(): T | undefined;
+
+    /**
      * Inserts a new element at the beginning of the LinkedList.
      * @param data The data to insert at the beginning.
      */
@@ -77,4 +82,6 @@ export interface ISinglyLinkedList<T> {
      * @returns An array containing the data of each node in the LinkedList.
      */
     toArray(): T[];
+
+    [Symbol.iterator](): Iterator<T>;
 }
