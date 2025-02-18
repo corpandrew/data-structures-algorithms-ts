@@ -81,12 +81,13 @@ lists are great for maintaining a history of actions.
     *   [x] **Stack:** Implement a simple expression evaluator for balanced parentheses (e.g.,
         `isValidParentheses(string expression)`).
 
-### Day 3: Trees - Binary Trees and Binary Search Trees (BSTs)
+### Day 3 & 4: Trees - Binary Trees, Binary Search Trees (BSTs), and Balanced BSTs
 
-**Data Structure Focus:** Binary Trees and Binary Search Trees
+**Data Structure Focus:** Binary Trees, Binary Search Trees, and Balanced Binary Search Trees (AVL Trees, Red-Black
+Trees)
 
-**Fake Application:**  Imagine building a simple contact list that you want to search and sort efficiently. A BST can
-help with sorted storage and quick lookups.
+**Fake Application:**  Imagine building a simple contact list that you want to search and sort efficiently, and also
+ensuring consistent search performance even with many insertions and deletions. BSTs and Balanced BSTs are key for this.
 
 **Algorithms to Implement:**
 
@@ -108,13 +109,49 @@ help with sorted storage and quick lookups.
     *   [x] `delete(data)`: Delete a node from the BST, handling different cases (leaf, one child, two children).
     *   [x] `findMin(node)`: Find the node with the minimum value in a subtree.
     *   [x] `findMax(node)`: Find the node with the maximum value in a subtree.
-*   [x] **BST Application (Contact List - Conceptual):**
-    *   [x] Think about how you could store contact names in a BST, ordered alphabetically.
-    *   [x] Implement `addContact(name)` (insert into BST).
-    *   [x] Implement `findContact(name)` (search in BST).
-    *   [x] Implement `listContactsAlphabetically()` (in-order traversal).
+*   [ ] **Balanced Binary Search Trees (Choose one or both - AVL or Red-Black):**
+    *   [ ] **AVL Tree:**
+        *   [ ] Study AVL Tree balancing principles (height balance, rotations).
+        *   [ ] Create an AVLNode class (extending TreeNode, with height property).
+        *   [ ] Create an AVLTree class (extending BinarySearchTree).
+        *   [ ] Implement AVL Tree specific `insert` and `delete` methods that maintain AVL balance using rotations (
+            Single and Double Rotations).
+        *   [ ] Implement `getHeight` (AVL specific, considering balance factors).
+    *   [ ] **Red-Black Tree (Optional - More Complex):**
+        *   [ ] Study Red-Black Tree properties (colors, rotations, balancing rules).
+        *   [ ] Create a RedBlackNode class (extending TreeNode, with color property).
+        *   [ ] Create a RedBlackTree class (extending BinarySearchTree).
+        *   [ ] Implement Red-Black Tree specific `insert` and `delete` methods that maintain Red-Black balance using
+            rotations and color flips.
+*   [ ] **BST/Balanced BST Application (Enhanced Contact List - Conceptual):**
+    *   [ ] Extend the Contact List application concept to consider scenarios where you need guaranteed fast search and
+        sorted listing even with frequent additions and removals of contacts. Balanced BSTs address this.
 
-### Day 4: Hash Tables (Hash Maps)
+### Day 5: Tries (Prefix Trees)
+
+**Data Structure Focus:** Tries (Prefix Trees)
+
+**Fake Application:** Imagine building an autocomplete feature for a search bar or a dictionary application with
+prefix-based search.
+
+**Algorithms to Implement:**
+
+*   [ ] **Trie Implementation:**
+    *   [ ] Create a TrieNode class (with children map/object and `isEndOfWord` flag).
+    *   [ ] Create a Trie class (with `root` node).
+    *   [ ] `insert(word)`: Insert a word into the Trie.
+    *   [ ] `search(word)`: Search for a complete word in the Trie.
+    *   [ ] `startsWith(prefix)`: Check if there is any word in the trie that starts with the given prefix (for
+        autocomplete).
+    *   [ ] `getWordsStartingWithPrefix(prefix)`: Return all words in the trie that start with the given prefix (for
+        autocomplete suggestions).
+    *   [ ] (Optional) `delete(word)`: Delete a word from the Trie (more complex, needs careful handling of nodes).
+*   [ ] **Trie Application (Autocomplete - Conceptual):**
+    *   [ ] Think about how a Trie can efficiently store a dictionary of words for autocomplete.
+    *   [ ] Implement `autocompleteSuggestions(prefix)` using `getWordsStartingWithPrefix` to return a list of suggested
+        words for a given prefix.
+
+### Day 6: Hash Tables (Hash Maps)
 
 **Data Structure Focus:** Hash Tables (or Hash Maps)
 
@@ -140,7 +177,7 @@ help with sorted storage and quick lookups.
     *   [ ] Implement `cacheData(key, data)` (put in hash table).
     *   [ ] Implement `getCachedData(key)` (get from hash table).
 
-### Day 5: Heaps and Priority Queues
+### Day 7 & 8: Heaps and Priority Queues
 
 **Data Structure Focus:** Heaps (Min-Heap, Max-Heap) and Priority Queues
 
@@ -170,7 +207,7 @@ help with sorted storage and quick lookups.
     *   [ ] `addTask(taskName, priority)` (enqueue with priority).
     *   [ ] `getNextTask()` (dequeue to get the highest priority task).
 
-### Day 6: Graphs - Basic Graph Representation and Traversal
+### Day 9 & 10: Graphs - Basic Graph Representation and Traversal
 
 **Data Structure Focus:** Graphs (Adjacency Matrix, Adjacency List)
 
@@ -200,7 +237,7 @@ help with sorted storage and quick lookups.
     *   [ ] Implement `areConnected(person1, person2)` using BFS or DFS to check if there is a path between two people (
         friends of friends, etc.).
 
-### Day 7: More Graph Algorithms (Optional - Depending on Interview Focus)
+### Day 11 & 12: More Graph Algorithms (Optional - Depending on Interview Focus)
 
 **Data Structure Focus:** Graphs (Advanced Algorithms)
 
@@ -233,3 +270,6 @@ help with sorted storage and quick lookups.
   platforms like LeetCode, HackerRank, etc., that utilize these concepts.
 * **Focus on Fundamentals:**  Solid understanding of these fundamental data structures and algorithms is crucial for
   most software engineering interviews, especially at the mid-senior level.
+* **Prioritize Balanced BSTs and Tries Based on Your Goals:** Focus on Balanced BSTs (AVL or Red-Black) within the "
+  Trees" Day. Consider Tries in Day 6 if you have time and if they are relevant to your target roles. If time is
+  limited, prioritize Balanced BSTs as they are generally more broadly applicable in interviews.
