@@ -109,22 +109,22 @@ ensuring consistent search performance even with many insertions and deletions. 
     *   [x] `delete(data)`: Delete a node from the BST, handling different cases (leaf, one child, two children).
     *   [x] `findMin(node)`: Find the node with the minimum value in a subtree.
     *   [x] `findMax(node)`: Find the node with the maximum value in a subtree.
-*   [ ] **Balanced Binary Search Trees (Choose one or both - AVL or Red-Black):**
-    *   [ ] **AVL Tree:**
-        *   [ ] Study AVL Tree balancing principles (height balance, rotations).
-        *   [ ] Create an AVLNode class (extending TreeNode, with height property).
-        *   [ ] Create an AVLTree class (extending BinarySearchTree).
-        *   [ ] Implement AVL Tree specific `insert` and `delete` methods that maintain AVL balance using rotations (
+*   [x] **Balanced Binary Search Trees (Choose one or both - AVL or Red-Black):**
+    *   [x] **AVL Tree:**
+        *   [x] Study AVL Tree balancing principles (height balance, rotations).
+        *   [x] Create an AVLNode class (extending TreeNode, with height property).
+        *   [x] Create an AVLTree class (extending BinarySearchTree).
+        *   [x] Implement AVL Tree specific `insert` and `delete` methods that maintain AVL balance using rotations (
             Single and Double Rotations).
-        *   [ ] Implement `getHeight` (AVL specific, considering balance factors).
+        *   [x] Implement `getHeight` (AVL specific, considering balance factors).
     *   [ ] **Red-Black Tree (Optional - More Complex):**
         *   [ ] Study Red-Black Tree properties (colors, rotations, balancing rules).
         *   [ ] Create a RedBlackNode class (extending TreeNode, with color property).
         *   [ ] Create a RedBlackTree class (extending BinarySearchTree).
         *   [ ] Implement Red-Black Tree specific `insert` and `delete` methods that maintain Red-Black balance using
             rotations and color flips.
-*   [ ] **BST/Balanced BST Application (Enhanced Contact List - Conceptual):**
-    *   [ ] Extend the Contact List application concept to consider scenarios where you need guaranteed fast search and
+*   [x] **BST/Balanced BST Application (Enhanced Contact List - Conceptual):**
+    *   [x] Extend the Contact List application concept to consider scenarios where you need guaranteed fast search and
         sorted listing even with frequent additions and removals of contacts. Balanced BSTs address this.
 
 ### Day 5: Tries (Prefix Trees)

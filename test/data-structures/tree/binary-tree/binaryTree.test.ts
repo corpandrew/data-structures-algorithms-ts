@@ -1,7 +1,7 @@
-import { IBinaryTree } from '../../../src/data-structures/tree/binary-tree/types';
-import { BinaryTree } from '../../../src/data-structures/tree/binary-tree/binaryTree';
+import { IBinaryTree } from '../../../../src/data-structures/tree/binary-tree/types';
+import { BinaryTree } from '../../../../src/data-structures/tree/binary-tree/binaryTree';
 import { describe, it, expect, beforeEach } from 'vitest';
-import {prettyPrintTree} from "../../../src/data-structures/tree/prettyPrintTree";
+import {prettyPrintTree} from "../../../../src/data-structures/tree/prettyPrintTree";
 
 describe('BinaryTree', () => {
     let binaryTree: IBinaryTree<number>;

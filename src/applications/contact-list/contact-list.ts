@@ -1,33 +1,33 @@
 import {IContactList} from "./types.ts";
-import {IBinarySearchTree, ITreeNode} from "../../data-structures/tree/binary-tree/types.ts";
-import {BinarySearchTree} from "../../data-structures/tree/binary-tree/binarySearchTree.ts";
+import {IBinaryTree, ITreeNode} from "../../data-structures/tree/binary-tree/types.ts";
+import {AVLTree} from "../../data-structures/tree/avl-tree/avlTree.ts";
 
 export class ContactList implements IContactList {
 
-    private binarySearchTree: IBinarySearchTree<string>;
+    private binaryTree: IBinaryTree<string>;
 
     public constructor() {
-        this.binarySearchTree = new BinarySearchTree<string>();
+        this.binaryTree = new AVLTree<string>();
     }
 
     addContact(name: string): void {
-        this.binarySearchTree.insert(name);
+        this.binaryTree.insert(name);
     }
 
     findContact(name: string): boolean {
-        return this.binarySearchTree.search(name);
+        return this.binaryTree.search(name);
     }
 
     getContactCount(): number {
-        return this.binarySearchTree.size();
+        return this.binaryTree.size();
     }
 
     listContactsAlphabetically(): string[] {
-        return this.binarySearchTree.inOrderTraversal();
+        return this.binaryTree.inOrderTraversal();
     }
 
     getRoot(): ITreeNode<string> | null {
-        return this.binarySearchTree.getRoot();
+        return this.binaryTree.getRoot();
     }
 
 }

@@ -1,5 +1,5 @@
 import {IBinaryTree, ITreeNode} from "./types.ts";
-import {TreeNode} from "./TreeNode.ts";
+import {TreeNode} from "./treeNode.ts";
 import {Queue} from "../../queue/queue.ts";
 
 export class BinaryTree<T> implements IBinaryTree<T> {

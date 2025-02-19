@@ -1,6 +1,6 @@
 import {IBinarySearchTree, ITreeNode} from "./types.ts";
 import {BinaryTree} from "./binaryTree.ts";
-import {TreeNode} from "./TreeNode.ts";
+import {TreeNode} from "./treeNode.ts";
 
 export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchTree<T> {
 
@@ -47,7 +47,9 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
     }
 
     private deleteNode(node: ITreeNode<T> | null, data: T): [ITreeNode<T> | null, boolean] {
-        if (node === null) return [null, false];
+        if (node === null) {
+            return [null, false];
+        }
 
         if (data < node.getData()) {
             const [left, deleted] = this.deleteNode(node.getLeft(), data);
@@ -71,9 +73,9 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
                 const [right, deleted] = this.deleteNode(node.getRight(), minNode.getData());
                 node.setRight(right);
                 return [node, deleted];
-            } else {
-                return [node.getLeft(), true];
             }
+
+            return [node.getLeft(), true];
         }
     }
 
@@ -111,7 +113,7 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
         return minNode ? minNode.getData() : undefined;
     }
 
-    private findMinNode(node: ITreeNode<T> | null): ITreeNode<T> | null {
+    protected findMinNode(node: ITreeNode<T> | null): ITreeNode<T> | null {
         let current = node;
         while (current && current.getLeft()) {
             current = current.getLeft();

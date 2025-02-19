@@ -5,8 +5,8 @@ import {ITreeNode} from "./types.ts";
  */
 export class TreeNode<T> implements ITreeNode<T> {
     private data: T;
-    private left: ITreeNode<T> | null;
-    private right: ITreeNode<T> | null;
+    protected left: ITreeNode<T> | null;
+    protected right: ITreeNode<T> | null;
 
     public constructor(data: T) {
         this.data = data;

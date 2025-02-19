@@ -1,7 +1,7 @@
-import { IBinarySearchTree } from '../../../src/data-structures/tree/binary-tree/types'; // Adjust path if needed
-import { BinarySearchTree } from '../../../src/data-structures/tree/binary-tree/binarySearchTree'; // Assuming your implementation is named BinarySearchTree
+import { IBinarySearchTree } from '../../../../src/data-structures/tree/binary-tree/types'; // Adjust path if needed
+import { BinarySearchTree } from '../../../../src/data-structures/tree/binary-tree/binarySearchTree'; // Assuming your implementation is named BinarySearchTree
 import { describe, it, expect, beforeEach } from 'vitest';
-import {prettyPrintTree} from "../../../src/data-structures/tree/prettyPrintTree";
+import {prettyPrintTree} from "../../../../src/data-structures/tree/prettyPrintTree";
 
 describe('BinarySearchTree', () => {
     let bst: IBinarySearchTree<number>;
