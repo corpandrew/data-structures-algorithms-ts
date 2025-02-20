@@ -1,7 +1,7 @@
-import {ContactList} from '../../src/applications/contact-list/contact-list'; // Adjust path to your ContactList class
+import {ContactList} from '../../../src/applications/contact-list/contact-list'; // Adjust path to your ContactList class
 import {describe, it, expect, beforeEach} from 'vitest';
-import {prettyPrintTree} from "../../src/data-structures/tree/prettyPrintTree";
-import {IContactList} from "../../src/applications/contact-list/types";
+import {prettyPrintTree} from "../../../src/data-structures/tree/prettyPrintTree";
+import {IContactList} from "../../../src/applications/contact-list/types";
 
 describe('ContactList Application', () => {
     let contactList: IContactList;

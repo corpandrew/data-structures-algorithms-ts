@@ -136,19 +136,18 @@ prefix-based search.
 
 **Algorithms to Implement:**
 
-*   [ ] **Trie Implementation:**
-    *   [ ] Create a TrieNode class (with children map/object and `isEndOfWord` flag).
-    *   [ ] Create a Trie class (with `root` node).
-    *   [ ] `insert(word)`: Insert a word into the Trie.
-    *   [ ] `search(word)`: Search for a complete word in the Trie.
-    *   [ ] `startsWith(prefix)`: Check if there is any word in the trie that starts with the given prefix (for
+*   [x] **Trie Implementation:**
+    *   [x] Create a TrieNode class (with children map/object and `isEndOfWord` flag).
+    *   [x] Create a Trie class (with `root` node).
+    *   [x] `insert(word)`: Insert a word into the Trie.
+    *   [x] `search(word)`: Search for a complete word in the Trie.
+    *   [x] `startsWith(prefix)`: Check if there is any word in the trie that starts with the given prefix (for
         autocomplete).
-    *   [ ] `getWordsStartingWithPrefix(prefix)`: Return all words in the trie that start with the given prefix (for
+    *   [x] `getWordsStartingWithPrefix(prefix)`: Return all words in the trie that start with the given prefix (for
         autocomplete suggestions).
-    *   [ ] (Optional) `delete(word)`: Delete a word from the Trie (more complex, needs careful handling of nodes).
-*   [ ] **Trie Application (Autocomplete - Conceptual):**
-    *   [ ] Think about how a Trie can efficiently store a dictionary of words for autocomplete.
-    *   [ ] Implement `autocompleteSuggestions(prefix)` using `getWordsStartingWithPrefix` to return a list of suggested
+*   [x] **Trie Application (Autocomplete - Conceptual):**
+    *   [x] Think about how a Trie can efficiently store a dictionary of words for autocomplete.
+    *   [x] Implement `autocompleteSuggestions(prefix)` using `getWordsStartingWithPrefix` to return a list of suggested
         words for a given prefix.
 
 ### Day 6: Hash Tables (Hash Maps)
