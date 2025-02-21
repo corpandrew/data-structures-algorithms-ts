@@ -158,23 +158,23 @@ prefix-based search.
 
 **Algorithms to Implement:**
 
-*   [ ] **Hash Table Implementation:**
-    *   [ ] Choose a hashing function (simple ones for practice, e.g., modulo based).
-    *   [ ] Decide on a collision resolution strategy:
-        *   [ ] Separate Chaining (using Linked Lists at each index)
+*   [x] **Hash Table Implementation:**
+    *   [x] Choose a hashing function (simple ones for practice, e.g., modulo based).
+    *   [x] Decide on a collision resolution strategy:
+        *   [x] Separate Chaining (using Linked Lists at each index)
         *   [ ] Open Addressing (e.g., Linear Probing, Quadratic Probing - Separate Chaining is often simpler to
             implement first).
-    *   [ ] Create a HashTable class.
-    *   [ ] `put(key, value)`: Insert a key-value pair into the hash table.
-    *   [ ] `get(key)`: Retrieve the value associated with a given key.
-    *   [ ] `remove(key)`: Remove a key-value pair from the hash table.
-    *   [ ] `containsKey(key)`: Check if a key exists in the hash table.
-    *   [ ] `size()`: Get the number of key-value pairs in the hash table.
-*   [ ] **Hash Table Application (Cache - Conceptual):**
-    *   [ ] Think about how you could use a hash table to store cached data, where the key is the data identifier and
+    *   [x] Create a HashTable class.
+    *   [x] `put(key, value)`: Insert a key-value pair into the hash table.
+    *   [x] `get(key)`: Retrieve the value associated with a given key.
+    *   [x] `remove(key)`: Remove a key-value pair from the hash table.
+    *   [x] `containsKey(key)`: Check if a key exists in the hash table.
+    *   [x] `size()`: Get the number of key-value pairs in the hash table.
+*   [x] **Hash Table Application (Cache - Conceptual):**
+    *   [x] Think about how you could use a hash table to store cached data, where the key is the data identifier and
         the value is the data itself.
-    *   [ ] Implement `cacheData(key, data)` (put in hash table).
-    *   [ ] Implement `getCachedData(key)` (get from hash table).
+    *   [x] Implement `cacheData(key, data)` (put in hash table).
+    *   [x] Implement `getCachedData(key)` (get from hash table).
 
 ### Day 7 & 8: Heaps and Priority Queues
 
