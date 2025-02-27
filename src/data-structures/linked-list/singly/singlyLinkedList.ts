@@ -129,15 +129,14 @@ export class SinglyLinkedList<T> implements ISinglyLinkedList<T>, Iterable<T> {
             return this.deleteFromBeginning();
         }
 
-        // Correction needed in the loop condition:
         let currNode = this.head;
         let nodeBefore: Node<T> | null = null;
         let i = 0;
         while (currNode !== null) {
-            if (i + 1 === index) { // Correct condition: check if i+1 === index
+            if (i === index) {
                 const returnVal = currNode.getValue();
                 nodeBefore?.setNext(currNode.getNext());
-                currNode.setNext(null);//Do I need to do this?? - Good Question! Answer below
+                currNode.setNext(null);
                 this.length--;
                 return returnVal;
             }
@@ -145,7 +144,7 @@ export class SinglyLinkedList<T> implements ISinglyLinkedList<T>, Iterable<T> {
             currNode = currNode?.getNext();
             i++;
         }
-        return undefined; // Should not reach here in normal cases after checks, but good to have a return
+        return undefined;
     }
 
     search(data: T): boolean {
