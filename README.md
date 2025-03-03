@@ -184,23 +184,23 @@ prefix-based search.
 
 **Algorithms to Implement:**
 
-*   [ ] **Heap (Min-Heap):**
-    *   [ ] Create a MinHeap class (often implemented using an array).
-    *   [ ] `insert(value)`: Insert a new value into the min-heap, maintaining heap property (heapify up).
-    *   [ ] `extractMin()`: Remove and return the minimum value (root) from the min-heap, maintaining heap property (
+*   [x] **Heap (Min-Heap):**
+    *   [x] Create a MinHeap class (often implemented using an array).
+    *   [x] `insert(value)`: Insert a new value into the min-heap, maintaining heap property (heapify up).
+    *   [x] `extractMin()`: Remove and return the minimum value (root) from the min-heap, maintaining heap property (
         heapify down).
-    *   [ ] `peekMin()`: Return the minimum value without removing it.
-    *   [ ] `heapify()` (build a heap from an array).
-    *   [ ] `size()`: Get the number of elements in the heap.
-*   [ ] **Max-Heap:**
-    *   [ ] Implement a MaxHeap class (similar to MinHeap, but with max-heap property).
-    *   [ ] Implement `insert`, `extractMax`, `peekMax`, `heapify` for Max-Heap.
-*   [ ] **Priority Queue (using Heap):**
-    *   [ ] Create a PriorityQueue class (using either Min-Heap or Max-Heap depending on priority definition - e.g.,
+    *   [x] `peekMin()`: Return the minimum value without removing it.
+    *   [x] `heapify()` (build a heap from an array).
+    *   [x] `size()`: Get the number of elements in the heap.
+*   [x] **Max-Heap:**
+    *   [x] Implement a MaxHeap class (similar to MinHeap, but with max-heap property).
+    *   [x] Implement `insert`, `extractMax`, `peekMax`, `heapify` for Max-Heap.
+*   [x] **Priority Queue (using Heap):**
+    *   [x] Create a PriorityQueue class (using either Min-Heap or Max-Heap depending on priority definition - e.g.,
         Min-Heap for lowest priority value being highest priority).
-    *   [ ] `enqueue(item, priority)`: Add an item with a priority to the priority queue.
-    *   [ ] `dequeue()`: Remove and return the item with the highest priority.
-    *   [ ] `peek()`: Return the item with the highest priority without removing it.
+    *   [x] `enqueue(item, priority)`: Add an item with a priority to the priority queue.
+    *   [x] `dequeue()`: Remove and return the item with the highest priority.
+    *   [x] `peek()`: Return the item with the highest priority without removing it.
 *   [ ] **Priority Queue Application (Task Scheduler - Conceptual):**
     *   [ ] Think about how you can use a priority queue to schedule tasks based on priority levels.
     *   [ ] `addTask(taskName, priority)` (enqueue with priority).
@@ -215,16 +215,16 @@ prefix-based search.
 **Algorithms to Implement:**
 
 *   [ ] **Graph Representation:**
-    *   [ ] **Adjacency Matrix:**
-        *   [ ] Implement a Graph class using an adjacency matrix to represent edges.
-        *   [ ] `addVertex(vertex)`: Add a new vertex to the graph.
-        *   [ ] `addEdge(vertex1, vertex2)`: Add an edge between two vertices (undirected graph for now).
-        *   [ ] `hasEdge(vertex1, vertex2)`: Check if an edge exists between two vertices.
-        *   [ ] `getNeighbors(vertex)`: Get a list of neighbors for a given vertex.
-    *   [ ] **Adjacency List:**
-        *   [ ] Implement a Graph class using an adjacency list (e.g., using a dictionary/map where keys are vertices
+    *   [x] **Adjacency Matrix:**
+        *   [x] Implement a Graph class using an adjacency matrix to represent edges.
+        *   [x] `addVertex(vertex)`: Add a new vertex to the graph.
+        *   [x] `addEdge(vertex1, vertex2)`: Add an edge between two vertices (undirected graph for now).
+        *   [x] `hasEdge(vertex1, vertex2)`: Check if an edge exists between two vertices.
+        *   [x] `getNeighbors(vertex)`: Get a list of neighbors for a given vertex.
+    *   [x] **Adjacency List:**
+        *   [x] Implement a Graph class using an adjacency list (e.g., using a dictionary/map where keys are vertices
             and values are lists of neighbors).
-        *   [ ] Implement `addVertex`, `addEdge`, `hasEdge`, `getNeighbors` for Adjacency List representation.
+        *   [x] Implement `addVertex`, `addEdge`, `hasEdge`, `getNeighbors` for Adjacency List representation.
 *   [ ] **Graph Traversal Algorithms:**
     *   [ ] **Breadth-First Search (BFS):**
         *   [ ] Implement BFS traversal starting from a given vertex.
