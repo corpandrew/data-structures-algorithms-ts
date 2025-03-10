@@ -3,7 +3,7 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "es6",
     "useDefineForClassFields": true,
-    "lib": ["es6"],
+    "lib": ["es6", "es2020", "dom"],
     "module": "ESNext",
     "skipLibCheck": true,
 

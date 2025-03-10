@@ -1,4 +1,4 @@
-import {linearSearch} from "../../algorithms/searching/linear.ts";
+import {linearSearch} from "../../algorithms/search/linear.ts";
 
 /**
  * Rough implementation of a wrapping array. Pretty simple...

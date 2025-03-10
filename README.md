@@ -214,7 +214,7 @@ prefix-based search.
 
 **Algorithms to Implement:**
 
-*   [ ] **Graph Representation:**
+*   [x] **Graph Representation:**
     *   [x] **Adjacency Matrix:**
         *   [x] Implement a Graph class using an adjacency matrix to represent edges.
         *   [x] `addVertex(vertex)`: Add a new vertex to the graph.
@@ -225,14 +225,15 @@ prefix-based search.
         *   [x] Implement a Graph class using an adjacency list (e.g., using a dictionary/map where keys are vertices
             and values are lists of neighbors).
         *   [x] Implement `addVertex`, `addEdge`, `hasEdge`, `getNeighbors` for Adjacency List representation.
-*   [ ] **Graph Traversal Algorithms:**
-    *   [ ] **Breadth-First Search (BFS):**
-        *   [ ] Implement BFS traversal starting from a given vertex.
-        *   [ ] Use a queue to manage vertices to visit.
-    *   [ ] **Depth-First Search (DFS):**
-        *   [ ] Implement DFS traversal starting from a given vertex (recursive or iterative using a stack).
+*   [x] **Graph Traversal Algorithms:**
+    *   [x] **Breadth-First Search (BFS):**
+        *   [x] Implement BFS traversal starting from a given vertex.
+        *   [x] Use a queue to manage vertices to visit.
+    *   [x] **Depth-First Search (DFS):**
+        *   [x] Implement DFS traversal starting from a given vertex, Iterative Approach.
+        *   [x] Implement DFS traversal starting from a given vertex, Recursive Approach.
 *   [ ] **Graph Application (Social Network - Conceptual):**
-    *   [ ] Think about how vertices could represent people and edges could represent friendships.
+    *   [ ] Think about how vertices could represent people and edges couldC represent friendships.
     *   [ ] Implement `areConnected(person1, person2)` using BFS or DFS to check if there is a path between two people (
         friends of friends, etc.).
 
