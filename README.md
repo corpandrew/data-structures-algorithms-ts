@@ -232,9 +232,9 @@ prefix-based search.
     *   [x] **Depth-First Search (DFS):**
         *   [x] Implement DFS traversal starting from a given vertex, Iterative Approach.
         *   [x] Implement DFS traversal starting from a given vertex, Recursive Approach.
-*   [ ] **Graph Application (Social Network - Conceptual):**
-    *   [ ] Think about how vertices could represent people and edges couldC represent friendships.
-    *   [ ] Implement `areConnected(person1, person2)` using BFS or DFS to check if there is a path between two people (
+*   [x] **Graph Application (Social Network - Conceptual):**
+    *   [x] Think about how vertices could represent people and edges couldC represent friendships.
+    *   [x] Implement `areConnected(person1, person2)` using BFS or DFS to check if there is a path between two people (
         friends of friends, etc.).
 
 ### Day 11 & 12: More Graph Algorithms (Optional - Depending on Interview Focus)
