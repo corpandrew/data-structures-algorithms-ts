@@ -1,4 +1,19 @@
 /**
+ * Weighted Edge (Relationship to a neighbor with an edge-weight).
+ */
+export interface IWeightedEdge<T> {
+    /**
+     * Neighbor of the Edge.
+     */
+    neighbor: T;
+
+    /**
+     * Weight of the edge to the neighbor.
+     */
+    weight: number;
+}
+
+/**
  * Interface for a generic Graph data structure.
  * Defines the basic graph operations, independent of specific representations (Adjacency Matrix, Adjacency List).
  * @template V The type of vertices in the graph.
@@ -111,7 +126,7 @@ export interface IWeightedGraph<V> { // Renamed interface to IWeightedGraph
      * @returns {Array<{neighbor: V, weight: number}>} An array of objects, each containing a neighbor vertex and the edge weight.
      * @memberof IWeightedGraph
      */
-    getWeightedNeighbors(vertex: V): Array<{ neighbor: V, weight: number }>;
+    getWeightedNeighbors(vertex: V): Array<IWeightedEdge<V>>;
 
     /**
      * Gets a list of all vertices in the graph.

@@ -24,7 +24,7 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
     private heap: MinHeap<PriorityEntry<T>>;
 
     constructor() {
-        this.heap = new MinHeap<PriorityEntry<T>>();
+        this.heap = new MinHeap<PriorityEntry<T>>((a, b) => a.priority - b.priority);
     }
 
     enqueue(item: T, priority: number): void {

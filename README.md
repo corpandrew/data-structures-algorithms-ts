@@ -246,7 +246,7 @@ prefix-based search.
 **Algorithms to Implement (Choose based on your interview focus and time):**
 
 *   [ ] **Shortest Path Algorithms:**
-    *   [ ] **Dijkstra's Algorithm:** Find the shortest path from a source vertex to all other vertices in a weighted
+    *   [x] **Dijkstra's Algorithm:** Find the shortest path from a source vertex to all other vertices in a weighted
         graph (non-negative weights).
     *   [ ] (Optional) Bellman-Ford Algorithm: Shortest paths in a weighted graph, can handle negative weights (but not
         negative cycles).

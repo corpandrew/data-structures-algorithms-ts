@@ -6,7 +6,7 @@ describe('MinHeap', () => {
     let minHeap: IMinHeap<number>;
 
     beforeEach(() => {
-        minHeap = new MinHeap<number>(); // Instantiate your MinHeap implementation
+        minHeap = new MinHeap<number>((a, b) => a - b); // Instantiate your MinHeap implementation
     });
 
     describe('isEmpty and size', () => {
@@ -71,7 +71,7 @@ describe('MinHeap', () => {
         });
 
         it('should return undefined when extracting from an empty heap', () => {
-            const emptyHeap = new MinHeap<number>();
+            const emptyHeap = new MinHeap<number>((a, b) => b - a);
             expect(emptyHeap.extractMin()).toBeUndefined();
         });
 
@@ -98,7 +98,7 @@ describe('MinHeap', () => {
         });
 
         it('should return undefined when peeking at an empty heap', () => {
-            const emptyHeap = new MinHeap<number>();
+            const emptyHeap = new MinHeap<number>((a, b) => a - b);
             expect(emptyHeap.peekMin()).toBeUndefined();
         });
     });

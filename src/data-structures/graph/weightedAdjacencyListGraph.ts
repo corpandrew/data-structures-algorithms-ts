@@ -1,28 +1,13 @@
-import {IWeightedGraph} from "./types.ts";
-
-/**
- * Weighted Edge (Relationship to a neighbor with an edge-weight).
- */
-interface WeightedEdge<T> {
-    /**
-     * Neighbor of the Edge.
-     */
-    neighbor: T;
-
-    /**
-     * Weight of the edge to the neighbor.
-     */
-    weight: number;
-}
+import {IWeightedEdge, IWeightedGraph} from "./types.ts";
 
 export class WeightedAdjacencyListGraph<T> implements IWeightedGraph<T> {
-    private verticesToListOfNeighbors: Map<T, WeightedEdge<T>[]>;
+    private verticesToListOfNeighbors: Map<T, IWeightedEdge<T>[]>;
 
     constructor() {
         this.verticesToListOfNeighbors = new Map();
     }
 
-    getWeightedNeighbors(vertex: T): WeightedEdge<T>[] {
+    getWeightedNeighbors(vertex: T): IWeightedEdge<T>[] {
         return this.verticesToListOfNeighbors.get(vertex) || [];
     }
 
@@ -39,19 +24,13 @@ export class WeightedAdjacencyListGraph<T> implements IWeightedGraph<T> {
         const vertex2Neighbors = this.verticesToListOfNeighbors.get(vertex2);
 
         //if v1 neighbors doesn't have v2, then add it.
-        if (vertex1Neighbors !== undefined && !vertex1Neighbors.find(v => v === vertex2)) {
-            vertex1Neighbors.push({
-                neighbor: vertex2,
-                weight,
-            });
+        if (vertex1Neighbors !== undefined && !vertex1Neighbors.find(v => v.neighbor === vertex2)) {
+            vertex1Neighbors.push({ neighbor: vertex2, weight });
         }
 
         //if v2 neighbors doesn't have v1, then add it.
-        if (vertex2Neighbors !== undefined && !vertex2Neighbors.find(v => v === vertex1)) {
-            vertex2Neighbors.push({
-                neighbor: vertex1,
-                weight,
-            });
+        if (vertex2Neighbors !== undefined && !vertex2Neighbors.find(v => v.neighbor === vertex1)) {
+            vertex2Neighbors.push({ neighbor: vertex1, weight });
         }
     }
 

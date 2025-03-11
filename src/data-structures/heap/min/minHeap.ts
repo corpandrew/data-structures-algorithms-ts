@@ -4,10 +4,12 @@ import {HeapNode} from "../types.ts";
 export class MinHeap<T> implements IMinHeap<T> {
     private heap: HeapNode<T>[];
     private nodeCount;
+    private compareFunction: (a: T, b: T) => number; // Comparison function
 
-    constructor() {
+    constructor(compareFunction: (a: T, b: T) => number) {
         this.heap = [];
         this.nodeCount = 0;
+        this.compareFunction = compareFunction;
     }
 
     private getLeftChildIndex(parentIndex: number): number {
@@ -54,11 +56,11 @@ export class MinHeap<T> implements IMinHeap<T> {
         //insert at last empty spot.
         this.heap.push(value);
         let index = this.heap.length - 1;
-        while (true) {
-            const hasParent = this.hasParent(index);
-            if (hasParent && this.heap[index]! < this.getParent(index)!) {
-                this.swap(index, this.getParentIndex(index))
-                index = this.getParentIndex(index);
+        while (this.hasParent(index)) {
+            const parentIndex = this.getParentIndex(index);
+            if (this.compareFunction(this.heap[index]!, this.getParent(index)!) < 0) {
+                this.swap(index, parentIndex)
+                index = parentIndex;
             } else {
                 break;
             }
@@ -86,11 +88,11 @@ export class MinHeap<T> implements IMinHeap<T> {
         while (this.hasLeftChild(index)) {
             let smallerChildIndex = this.getLeftChildIndex(index);
 
-            if (this.hasRightChild(index) && this.getRightChild(index)! < this.getLeftChild(index)!) {
+            if (this.hasRightChild(index) && this.compareFunction(this.getRightChild(index)!, this.getLeftChild(index)!) < 0) {
                 smallerChildIndex = this.getRightChildIndex(index);
             }
 
-            if (this.heap[index]! <= this.heap[smallerChildIndex]!) {
+            if (this.compareFunction(this.heap[index]!, this.heap[smallerChildIndex]!) <= 0) {
                 break;
             }
 
