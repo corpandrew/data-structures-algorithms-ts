@@ -253,9 +253,9 @@ prefix-based search.
 *   [ ] **Minimum Spanning Tree (MST) Algorithms:**
     *   [ ] **Prim's Algorithm:** Find a minimum spanning tree for a weighted undirected graph.
     *   [ ] (Optional) Kruskal's Algorithm: Another MST algorithm (often uses disjoint sets data structure).
-*   [ ] **Graph Application (Route Planning - Conceptual):**
-    *   [ ] Think about how vertices could be locations and edges could be roads with weights representing distances.
-    *   [ ] Use Dijkstra's algorithm to find the shortest route between two locations.
+*   [x] **Graph Application (Route Planning - Conceptual):**
+    *   [x] Think about how vertices could be locations and edges could be roads with weights representing distances.
+    *   [x] Use Dijkstra's algorithm to find the shortest route between two locations.
 
 **Important Notes:**
 
