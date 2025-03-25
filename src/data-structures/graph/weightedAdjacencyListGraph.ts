@@ -15,7 +15,7 @@ export class WeightedAdjacencyListGraph<T> implements IWeightedGraph<T> {
         this.verticesToListOfNeighbors.set(vertex, []);
     }
 
-    addEdge(vertex1: T, vertex2: T, weight: number): void {
+    addEdge(vertex1: T, vertex2: T, weight?: number): void {
         if (!this.verticesToListOfNeighbors.has(vertex1) || !this.verticesToListOfNeighbors.has(vertex2)) {
             return; // either v1 or v2 is not valid.
         }
@@ -25,12 +25,12 @@ export class WeightedAdjacencyListGraph<T> implements IWeightedGraph<T> {
 
         //if v1 neighbors doesn't have v2, then add it.
         if (vertex1Neighbors !== undefined && !vertex1Neighbors.find(v => v.neighbor === vertex2)) {
-            vertex1Neighbors.push({ neighbor: vertex2, weight });
+            vertex1Neighbors.push({ neighbor: vertex2, weight: weight ?? 0 });
         }
 
         //if v2 neighbors doesn't have v1, then add it.
         if (vertex2Neighbors !== undefined && !vertex2Neighbors.find(v => v.neighbor === vertex1)) {
-            vertex2Neighbors.push({ neighbor: vertex1, weight });
+            vertex2Neighbors.push({ neighbor: vertex1, weight: weight ?? 0 });
         }
     }
 
@@ -58,6 +58,10 @@ export class WeightedAdjacencyListGraph<T> implements IWeightedGraph<T> {
 
     clear(): void {
         this.verticesToListOfNeighbors = new Map();
+    }
+
+    getNeighbors(vertex: T): T[] {
+        return [...(this.verticesToListOfNeighbors?.get(vertex) ?? []).map(edge => edge.neighbor)];
     }
 
 }

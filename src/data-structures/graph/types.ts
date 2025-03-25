@@ -91,7 +91,7 @@ export interface IGraph<V> {
  * @interface IWeightedGraph // Renamed interface to IWeightedGraph to indicate weighted nature
  * @extends {IGraph<V>} // You could extend the unweighted IGraph, or define methods directly
  */
-export interface IWeightedGraph<V> { // Renamed interface to IWeightedGraph
+export interface IWeightedGraph<V> extends IGraph<V> { // Renamed interface to IWeightedGraph
     /**
      * Adds a vertex to the graph.
      * @param {V} vertex The vertex to add.
@@ -109,6 +109,7 @@ export interface IWeightedGraph<V> { // Renamed interface to IWeightedGraph
      * @returns {void}
      * @memberof IWeightedGraph
      */
+    addEdge(vertex1: V, vertex2: V): void;
     addEdge(vertex1: V, vertex2: V, weight: number): void;
 
     /**

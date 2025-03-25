@@ -201,10 +201,10 @@ prefix-based search.
     *   [x] `enqueue(item, priority)`: Add an item with a priority to the priority queue.
     *   [x] `dequeue()`: Remove and return the item with the highest priority.
     *   [x] `peek()`: Return the item with the highest priority without removing it.
-*   [ ] **Priority Queue Application (Task Scheduler - Conceptual):**
-    *   [ ] Think about how you can use a priority queue to schedule tasks based on priority levels.
-    *   [ ] `addTask(taskName, priority)` (enqueue with priority).
-    *   [ ] `getNextTask()` (dequeue to get the highest priority task).
+*   [x] **Priority Queue Application (Task Scheduler - Conceptual):**
+    *   [x] Think about how you can use a priority queue to schedule tasks based on priority levels.
+    *   [x] `addTask(taskName, priority)` (enqueue with priority).
+    *   [x] `getNextTask()` (dequeue to get the highest priority task).
 
 ### Day 9 & 10: Graphs - Basic Graph Representation and Traversal
 
